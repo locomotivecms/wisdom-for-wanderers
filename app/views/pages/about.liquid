@@ -21,6 +21,13 @@ position: 2
 {% extends parent %}
 
 {% block main %}
+  
+  <div class="img-box">
+    <a href="{{ 'gyeongbokgung-full.jpg' | theme_image_url | resize: '800x' }}">
+      <img src="{{ 'gyeongbokgung-full.jpg' | theme_image_url | resize: '400x'  }}" alt="Gyeongbokgung" />
+    </a>
+    <p>Gyeongbokgung, Seoul</p>
+  </div>
 
   <p>
     Thanks for visiting Wisdom for Wanders!
