@@ -1,0 +1,9 @@
+# if you go the the local development engine route, your file might look like this
+development:
+    host: localhost:8080
+    api_key: 0e52b493c9bed5bcd681a1514eb19197b01499be
+
+# if you go the locomotive hosting route, your file will look like this
+development:
+    host: khaki-dottie-1.locomotivehosting.com
+    api_key: d7284f6baf10571d8ecb498330668f3f52e4458b
