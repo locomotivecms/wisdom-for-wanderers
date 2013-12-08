@@ -12,31 +12,37 @@ position: 2
 
 # content type that this page is templatizing
 # content_type: "<slug of one of the content types>"
-
-# editable_elements:
-#   'some_block/some_slug': "<text>"
-#   'some_block/some_slug': "<relative path to the file under the public/samples folder>"
 ---
 
 {% extends parent %}
 
 {% block main %}
   
-  <div class="img-box">
-    <a href="{{ 'gyeongbokgung-full.jpg' | theme_image_url | resize: '800x' }}">
-      <img src="{{ 'gyeongbokgung-full.jpg' | theme_image_url | resize: '400x'  }}" alt="Gyeongbokgung" />
-    </a>
-    <p>Gyeongbokgung, Seoul</p>
-  </div>
+  {% block featured_photo %}
+    {% capture caption %}
+      {% editable_text "caption", format: "raw", rows: 3, hint: "Text displayed below the photo and in the ALT attribute." %}
+        Gyeongbokgung, Seoul
+      {% endeditable_text %}
+    {% endcapture %}
+    {% capture photo %}{% editable_file "photo" %}/samples/pages/gyeongbokgung-full.jpg{% endeditable_file %}{% endcapture %}
+    <div class="img-box">
+      <a href="{{ photo | resize: '800x' }}">
+        <img src="{{ photo | resize: '400x' }}" alt="{{ caption }}" />
+      </a>
+      <p>{{ caption }}</p>
+    </div>
+  {% endblock %}
 
-  <p>
-    Thanks for visiting Wisdom for Wanders!
-    This blog aims to introduce readers to cool things to see, eat, and do all over the world. And along the way, I'll share some handy travel tips that can make wandering the globe easier and more fun than ever.
-    The blog tends to focus on sights and places a little off the tourist trail, so unadventurous beware.
-  </p>
+  {% editable_text "about_body", rows: 20 %}
+    <p>
+      Thanks for visiting Wisdom for Wanders!
+      This blog aims to introduce readers to cool things to see, eat, and do all over the world. And along the way, I'll share some handy travel tips that can make wandering the globe easier and more fun than ever.
+      The blog tends to focus on sights and places a little off the tourist trail, so unadventurous beware.
+    </p>
+    <p>
+      I hope you enjoy the site and bon voyage!
+    </p>
+  {% endeditable_text %}
 
-  <p>
-    I hope you enjoy the site and bon voyage!
-  </p>
 
 {% endblock %}
