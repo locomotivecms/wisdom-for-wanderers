@@ -25,12 +25,7 @@ position: 2
       {% endeditable_text %}
     {% endcapture %}
     {% capture photo %}{% editable_file "photo" %}/samples/pages/gyeongbokgung-full.jpg{% endeditable_file %}{% endcapture %}
-    <div class="img-box">
-      <a href="{{ photo | resize: '800x' }}">
-        <img src="{{ photo | resize: '400x' }}" alt="{{ caption }}" />
-      </a>
-      <p>{{ caption }}</p>
-    </div>
+    {% include 'img_box' with caption, photo, size: "400x" %}
   {% endblock %}
 
   {% editable_text "about_body", rows: 20 %}

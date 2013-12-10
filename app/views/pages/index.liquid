@@ -64,8 +64,11 @@ published: true
         <div class="col-md-10 col-md-offset-1 col-sm-12 col-sm-offset-1">
           <h2>{{ page.title }}</h2>
           {% block main %}
-            Coming Soon.
+            <p>Coming Soon.</p>
+            {% assign photo = "temppeliaukio.jpg" | theme_image_url %}
+            {% include 'img_box' with photo, caption: "Temppeliaukio Church, Helsinki", size: "1000x300#" %}
           {% endblock %}
+          {% include 'footer' %}
         </div>
       </div>
     </div>

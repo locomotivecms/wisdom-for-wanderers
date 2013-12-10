@@ -3,6 +3,19 @@ body * {
   font-family: 'Open Sans', sans-serif;
 }
 
+/* the footer */
+footer {
+  margin-top: 10px;
+  background-color: #333;
+  color: #fff;
+}
+
+footer p {
+  padding: 10px;
+  text-align: center;
+}
+
+
 /* a nice frame for images */
 div.img-box {
   border-width: 5px;

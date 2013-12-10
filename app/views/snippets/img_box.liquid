@@ -1,0 +1,6 @@
+<div class="img-box">
+  <a href="{{ photo | resize: '800x>' }}">
+    <img src="{{ photo | resize: size }}" alt="{{ caption }}" />
+  </a>
+  <p>{{ caption }}</p>
+</div>
