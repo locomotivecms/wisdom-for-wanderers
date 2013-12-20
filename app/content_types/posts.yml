@@ -57,7 +57,7 @@ fields:
     label: Featured image # Human readable name of the field
     type: file
     required: false
-    hint: An image displayed next to the teaser when list posts
+    hint: An image displayed next to the teaser when listing posts
     localized: false
 
 - body: # The lowercase, underscored name of the field
