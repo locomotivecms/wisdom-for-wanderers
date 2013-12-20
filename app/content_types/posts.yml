@@ -1,0 +1,69 @@
+# Human readable name of this type
+name: Posts
+
+# Lowercase, underscored handle used to access this type
+slug: posts
+
+# Explanatory text displayed in the back-office
+description: Blog posts about travel
+
+# Slug of field used to identify entries by default, such as the title
+label_field_name: title
+
+# Valid values: manually, created_at, updated_at, or the slug of any field
+order_by: manually
+
+# Valid values: asc (ascending) and desc (descending). Set to asc by default.
+# order_direction: asc 
+
+# Specify a field slug to group entries by that field in the back-office.
+# group_by: <your field>
+
+# Activate public 'create' API (e.g for a contact form)
+# public_submission_enabled: false
+
+# Array of emails to be notified of new entries made with the public API
+# public_submission_accounts: ['john@example.com']
+
+# A list describing each field
+fields: 
+- title: # The lowercase, underscored name of the field
+    label: Title # Human readable name of the field
+    type: string
+    required: true
+    localized: false
+
+- posted_at: # The lowercase, underscored name of the field
+    label: Posted at # Human readable name of the field
+    type: date_time
+    required: true
+    localized: false
+
+- tags: # The lowercase, underscored name of the field
+    label: Tags # Human readable name of the field
+    type: tags
+    required: false
+    localized: false
+
+- teaser: # The lowercase, underscored name of the field
+    label: Teaser # Human readable name of the field
+    type: text
+    required: false
+    hint: A short lead-in to the post displayed when listing posts
+    localized: false
+    text_formatting: html # html (uses rich text editor) or text (uses plain text editor)
+
+- featured_image: # The lowercase, underscored name of the field
+    label: Featured image # Human readable name of the field
+    type: file
+    required: false
+    hint: An image displayed next to the teaser when list posts
+    localized: false
+
+- body: # The lowercase, underscored name of the field
+    label: Body # Human readable name of the field
+    type: text
+    required: false
+    hint: The full post text
+    localized: false
+    text_formatting: html # html (uses rich text editor) or text (uses plain text editor)
