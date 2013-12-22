@@ -1,26 +1,26 @@
 - "Sample 1":
-    posted_at: 08:00 2013-10-1
-    tags: backpacking cheap outdoor
+    posted_at: 2013-10-1 20:00:00 -0500
+    tags: [backpacking, cheap, outdoor]
     teaser: "Debitis et qui optio corporis enim labore. Et dolorem eum beatae officiis nam. Dignissimos iure adipisci est vel."
     featured_image: http://placehold.it/400x400 # Path to a file in the public/samples folder or to a remote and external file.
     body: "Voluptatum nam eius cupiditate. Dignissimos fugit hic ut mollitia aut sunt. Iusto odio magnam sunt eum dolores ea. Ea sunt qui molestiae temporibus. Velit quia similique recusandae sunt qui voluptatem voluptates tempore."
 
 - "Sample 2":
-    posted_at: 08:00 2013-10-8
+    posted_at: 2013-10-8 20:00:00 -0500
     tags: null
     teaser: "Ex et provident error ut. Nihil enim sapiente tempora error sequi et eligendi ea. Molestiae ut esse praesentium voluptates quas asperiores sapiente vel. Aut sequi ut ducimus. A voluptates nobis enim aut et quod labore."
     featured_image: http://placehold.it/400x400 # Path to a file in the public/samples folder or to a remote and external file.
     body: "Temporibus rem provident aut ipsum perspiciatis. Corrupti alias nostrum cupiditate quia numquam ex. Consequuntur fuga debitis eligendi quibusdam eius placeat. Doloremque nesciunt officiis error aut. Non illo animi culpa doloremque."
 
 - "Sample 3":
-    posted_at: 08:00 2013-10-15
-    tags: expensive hotels luxury dining
+    posted_at: 2013-10-15 20:00:00 -0500
+    tags: [expensive, hotels, luxury, dining]
     teaser: "Aut ducimus nesciunt fugiat. Aliquid placeat consequatur sed corrupti molestiae aliquam expedita modi. Sunt ullam fugit et doloremque."
     featured_image: null # Path to a file in the public/samples folder or to a remote and external file.
     body: "Excepturi ipsum porro a exercitationem qui aliquid aut harum. Qui tempore animi quo. Quis natus fugiat optio."
 
 - "Sample 4":
-    posted_at: 08:00 2013-10-22
+    posted_at: 2013-10-22 20:00:00 -0500
     tags: null
     teaser: "Eius aut quam ipsam ut et voluptas labore natus. Corrupti repellendus excepturi odit eius qui. Ratione iste velit laborum. Molestias ut laudantium reiciendis sunt et mollitia dolor facilis."
     featured_image: null # Path to a file in the public/samples folder or to a remote and external file.
