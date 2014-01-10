@@ -1,0 +1,33 @@
+---
+title: Posts
+published: true
+listed: true
+position: 1
+---
+{% extends parent %}
+
+{% block main %}
+  <div class="row posts">
+    {% for post in contents.posts %}
+      <div class="post-listing col-sm-6 col-md-4">
+        <div class="thumbnail">
+          {% if post.featured_image %}
+            <img src="{{ post.featured_image | resize: '400x200#' }}" alt="{{ post.title | escape }}">
+          {% endif %}
+          <div class="caption">
+            <h3>{{ post.title | escape }}</h3>
+            <div class="teaser">{{ post.teaser }}</div>
+            <p>
+              <a href="/posts/{{ post._slug }}" class="btn btn-primary">
+                Read More
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+      {{ '<div class="clearfix visible-sm">&nbsp;</div>' | str_modulo: forloop.index0, 2 }}
+      {{ '<div class="clearfix hidden-sm hidden-xs">&nbsp;</div>' | str_modulo: forloop.index0, 3 }}
+    {% endfor %}
+  </div>
+{% endblock %}
+

@@ -17,7 +17,6 @@ position: 2
 {% extends parent %}
 
 {% block main %}
-  
   {% block featured_photo %}
     {% capture caption %}
       {% editable_text "caption", format: "raw", rows: 3, hint: "Text displayed below the photo and in the ALT attribute." %}
