@@ -1,0 +1,15 @@
+<div class="text-center">
+  <ul class="pagination">
+    <li{% unless paginate.previous_page %} class="disabled"{% endunless %}>
+      <a href="{{ paginate.previous.url }}">&laquo;</a>
+    </li>
+    {% for page in paginate.parts %}
+      <li{% unless page.is_link %} class="active"{% endunless %}>
+        <a href="{{ page.url }}">{{ page.title }}</a>
+      </li>
+    {% endfor %}
+    <li{% unless paginate.next_page %} class="disabled"{% endunless %}>
+      <a href="{{ paginate.next.url }}">&raquo;</a>
+    </li>
+  </ul>
+</div>
