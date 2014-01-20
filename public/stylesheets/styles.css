@@ -3,9 +3,32 @@ body * {
   font-family: 'Open Sans', sans-serif;
 }
 
+/* home page */
+body.index .jumbotron {
+  color: #fff;
+  text-align: justify;
+  background-image: url('../images/new_york_at_night.jpg');
+  background-position: center top;
+}
+body.index .jumbotron {
+  padding-top: 10px;
+  padding-bottom: 25%;
+}
+
 /* posts.liquid */
 body.posts div.post-listing {
   margin-bottom: 20px;
+}
+
+/* posts/content_type_template.liquid */
+article.post p.tags span {
+  margin-left: 10px;
+}
+
+article.post h3.posted-at {
+  font-size:20px;
+  margin-top:0px;
+  color:#999;
 }
 
 /* the footer */
@@ -57,6 +80,8 @@ div.img-box p {
   color: #fff;
 }
 
+
+
 /* phones */
 @media (max-width: 767px) {
   body.about .img-box {
@@ -66,6 +91,7 @@ div.img-box p {
 
   h1, h2 { text-align:center; }
 }
+
 
 /* tablets and up */
 @media (min-width: 768px) {
