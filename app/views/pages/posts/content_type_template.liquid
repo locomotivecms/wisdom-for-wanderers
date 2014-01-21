@@ -25,5 +25,20 @@ content_type: posts
     {{ post.body }}
   </div>
 </article>
-
+{% if post.photos.size > 0 %}
+  <h3>Photos</h3>
+    <div class="photos row">
+      {% for photo in post.photos %}
+        <div class="photo col-xs-6 col-sm-4 col-md-3">
+          {% assign caption = photo.caption %}
+          {% assign size = '350x300#' %}
+          {% include 'img_box', photo: photo.file, caption size  %}
+        </div>
+        {% cycle  '', '<div class="clearfix visible-xs">&nbsp;</div>' %}
+        {% cycle '', '', '<div class="clearfix visible-sm ">&nbsp;</div>' %}
+        {% cycle '', '', '', '<div class="clearfix hidden-sm hidden-xs">&nbsp;</div>' %}
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
 {% endblock %}

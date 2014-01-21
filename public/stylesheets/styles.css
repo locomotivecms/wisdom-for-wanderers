@@ -31,6 +31,10 @@ article.post h3.posted-at {
   color:#999;
 }
 
+div.photos div.img-box {
+  margin-bottom: 20px;
+}
+
 /* the footer */
 footer {
   margin-top: 10px;

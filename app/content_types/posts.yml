@@ -67,3 +67,12 @@ fields:
     hint: The full post text
     localized: false
     text_formatting: html # html (uses rich text editor) or text (uses plain text editor)
+
+- photos: # Name of the field
+    label: Photos
+    type: has_many
+    required: false
+    localized: false
+    class_name: photos # Define the slug of the target content type (eg. comments)
+    inverse_of: post  # Define the name of the field referring to Tests in the target content type (eg. post)
+    ui_enabled: true # If you want to manage the entries of the relationship directly from the source entry
