@@ -2,5 +2,5 @@
   <a href="{{ photo | resize: '800x>' }}">
     <img src="{{ photo | resize: size }}" alt="{{ caption | escape }}" />
   </a>
-  <p>{{ caption }}</p>
+  <p>{{ caption | caption }}</p>
 </div>
