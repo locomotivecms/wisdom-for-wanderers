@@ -9,8 +9,8 @@ published: true
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
     <meta charset="utf-8">
     <title>
-      {{ page.title }} - {{ site.name }}
-      | {% if page.seo_title %}{{ page.seo_title }}{% else %}{{ site.seo_title }}{% endif %}
+      {{ page.title | escape }} - {{ site.name | escape }}
+      | {% if page.seo_title %}{{ page.seo_title | escape }}{% else %}{{ site.seo_title | escape }}{% endif %}
     </title>
     <meta name="description" content="{% if page.meta_description %}{{ page.meta_description }}{% else %}{{ site.meta_description }}{% endif %}">
     <meta name="keywords" content="{{ site.meta_keywords }} {{ page.meta_keywords }}">
@@ -29,7 +29,7 @@ published: true
       <!-- Site Title -->
       <div class="row">
         <div class="col-md-10 col-md-offset-1 col-sm-12">
-          <h1>{{ site.name }}</h1>
+          <h1>{{ site.name | escape }}</h1>
         </div>
       </div>
 
@@ -63,7 +63,7 @@ published: true
       <!-- Page Content -->
       <div class="row">
         <div class="col-md-10 col-md-offset-1 col-sm-12">
-          {% unless page.slug == 'index' %}<h2>{{ page.title }}</h2>{% endunless %}
+          {% unless page.slug == 'index' %}<h2>{{ page.title | escape }}</h2>{% endunless %}
           {% block main %}
             <div class="jumbotron">
               <h1>Life's to short not to get away for awhile!</h1>
