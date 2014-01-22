@@ -32,7 +32,7 @@ content_type: posts
         <div class="photo col-xs-6 col-sm-4 col-md-3">
           {% assign caption = photo.caption %}
           {% assign size = '350x300#' %}
-          {% include 'img_box', photo: photo.file, caption size  %}
+          {% include 'img_box', photo: photo.file, caption, size  %}
         </div>
         {% cycle  '', '<div class="clearfix visible-xs">&nbsp;</div>' %}
         {% cycle '', '', '<div class="clearfix visible-sm ">&nbsp;</div>' %}
