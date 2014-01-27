@@ -16,7 +16,7 @@ name: Wisdom for Wanderers
 # The locale listed first is the site's default locale
 # Locales are specified using ISO language codes
 # Possible locales include: en, de, fr, pl, pt-BR, it, nl, nb, es, ru, et, ja, zh-CN
-locales: [en]
+locales: [en, ja]
 
 # The site's timezone
 # This converts the server's time to the site's time zone in templates

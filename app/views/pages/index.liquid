@@ -9,8 +9,8 @@ published: true
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
     <meta charset="utf-8">
     <title>
-      {{ page.title }} - {{ site.name }}
-      | {% if page.seo_title %}{{ page.seo_title }}{% else %}{{ site.seo_title }}{% endif %}
+      {{ page.title | escape }} - {{ site.name | escape }}
+      | {% if page.seo_title %}{{ page.seo_title | escape }}{% else %}{{ site.seo_title | escape }}{% endif %}
     </title>
     <meta name="description" content="{% if page.meta_description %}{{ page.meta_description }}{% else %}{{ site.meta_description }}{% endif %}">
     <meta name="keywords" content="{{ site.meta_keywords }} {{ page.meta_keywords }}">
@@ -29,7 +29,7 @@ published: true
       <!-- Site Title -->
       <div class="row">
         <div class="col-md-10 col-md-offset-1 col-sm-12">
-          <h1>{{ site.name }}</h1>
+          <h1>{{ site.name | escape }}</h1>
         </div>
       </div>
 
@@ -50,7 +50,7 @@ published: true
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav">
                 <li {% if page.slug == "index" %}class="active"{% endif %}>
-                  <a href="/">Home</a>
+                  <a href="/{{ locale }}">{{ 'home_page' | translate }}</a>
                 </li>
                 {% nav 'site', no_wrapper: true, active_class: "active" %}
               </ul>
@@ -59,20 +59,32 @@ published: true
         </div>
       </div>
 
-
       <!-- Page Content -->
       <div class="row">
         <div class="col-md-10 col-md-offset-1 col-sm-12">
-          {% unless page.slug == 'index' %}<h2>{{ page.title }}</h2>{% endunless %}
+          {% unless page.slug == 'index' %}<h2>{{ page.title | escape }}</h2>{% endunless %}
           {% block main %}
-            <div class="jumbotron">
-              <h1>Life's to short not to get away for awhile!</h1>
-              <p class="sub-title">
+            {% capture jumbotron_title %}
+              {% editable_text "jumbotron_title", format: "raw", rows: 1 %}
+              Life's to short not to get away for awhile!
+              {% endeditable_text %}
+            {% endcapture %}
+            {% capture jumbotron_message %}
+              {% editable_text "jumbotron_message", format: "raw", rows: 3 %}
                 Learn about cool places to see abroad, interesting things to eat, and little travel tips you won't believe you lived without.
-              </p>
+              {% endeditable_text %}
+            {% endcapture %}
+            {% capture jumbotron_button %}
+              {% editable_text "jumbotron_button", format: "raw", rows: 1%}
+                Browse our articles
+              {% endeditable_text %}
+            {% endcapture %}
+            <div class="jumbotron">
+              <h1>{{ jumbotron_title | escape }}</h1>
+              <p class="sub-title">{{ jumbotron_message | escape }}</p>
               <p>
                 <a href="/posts" class="btn btn-primary btn-lg">
-                  Browse our articles
+                  {{ jumbotron_button | escape }}
                 </a>
               </p>
             </div>

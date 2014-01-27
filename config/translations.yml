@@ -1,8 +1,13 @@
-# Your translations go here. To be used with the 'translate' liquid filter
-# Example:
-#   {{ 'hello_world' | translate }}
-#
+home_page:
+  en: Home
+  ja: ホーム
 
-# hello_world:
-#   en: Hello world !
-#   fr: Bonjour le monde !
+read_more:
+  en: Read More
+  ja: もっと見る
+
+en:
+  ja: English
+
+ja:
+  en: 日本語

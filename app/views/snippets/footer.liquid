@@ -1,4 +1,11 @@
 <div class="clearfix"></div>
 <footer class="footer">
-  <p>&copy; Wisdom for Wanderers {{ '2011-10-10' | localized_date: '%Y' }} </p>
+  <p>
+    &copy; {{ site.name | escape }} {{ now | localized_date: '%Y' }}
+    {% for locale_string in locales %}
+      {% unless locale_string == locale %}
+        | <a href="/{{ locale_string }}">{{ locale_string | translate }}</a>
+      {% endunless %}
+    {% endfor %}
+  </p>
 </footer>
