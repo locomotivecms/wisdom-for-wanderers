@@ -65,14 +65,27 @@ published: true
         <div class="col-md-10 col-md-offset-1 col-sm-12">
           {% unless page.slug == 'index' %}<h2>{{ page.title | escape }}</h2>{% endunless %}
           {% block main %}
-            <div class="jumbotron">
-              <h1>Life's to short not to get away for awhile!</h1>
-              <p class="sub-title">
+            {% capture jumbotron_title %}
+              {% editable_text "jumbotron_title", format: "raw", rows: 1 %}
+              Life's to short not to get away for awhile!
+              {% endeditable_text %}
+            {% endcapture %}
+            {% capture jumbotron_message %}
+              {% editable_text "jumbotron_message", format: "raw", rows: 3 %}
                 Learn about cool places to see abroad, interesting things to eat, and little travel tips you won't believe you lived without.
-              </p>
+              {% endeditable_text %}
+            {% endcapture %}
+            {% capture jumbotron_button %}
+              {% editable_text "jumbotron_button", format: "raw", rows: 1%}
+                Browse our articles
+              {% endeditable_text %}
+            {% endcapture %}
+            <div class="jumbotron">
+              <h1>{{ jumbotron_title | escape }}</h1>
+              <p class="sub-title">{{ jumbotron_message | escape }}</p>
               <p>
                 <a href="/posts" class="btn btn-primary btn-lg">
-                  Browse our articles
+                  {{ jumbotron_button | escape }}
                 </a>
               </p>
             </div>
