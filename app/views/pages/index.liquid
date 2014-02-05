@@ -10,7 +10,7 @@ published: true
     <meta charset="utf-8">
     <title>
       {{ page.title | escape }} - {{ site.name | escape }}
-      | {% if page.seo_title | escape %}{{ page.seo_title | escape }}{% else %}{{ site.seo_title | escape }}{% endif %}
+      | {% if page.seo_title %}{{ page.seo_title | escape }}{% else %}{{ site.seo_title | escape }}{% endif %}
     </title>
     <meta name="description" content="{% if page.meta_description %}{{ page.meta_description }}{% else %}{{ site.meta_description }}{% endif %}">
     <meta name="keywords" content="{{ site.meta_keywords }} {{ page.meta_keywords }}">
@@ -62,7 +62,7 @@ published: true
       <!-- Page Content -->
       <div class="row">
         <div class="col-md-10 col-md-offset-1 col-sm-12">
-          <h2>{{ page.title }}</h2>
+          <h2>{{ page.title | escape }}</h2>
           {% block main %}
             <p>Coming Soon.</p>
             {% assign photo = "temppeliaukio.jpg" | theme_image_url %}
