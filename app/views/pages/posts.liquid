@@ -12,8 +12,8 @@ position: 1
       {% for post in paginate.collection %}
         <div class="post-listing col-sm-6 col-md-4">
           <div class="thumbnail">
-            {% if post.featured_image %}
-              <img src="{{ post.featured_image | resize: '400x200#' }}" alt="{{ post.title | escape }}">
+            {% if post.featured_image.url %}
+              <img src="{{ post.featured_image.url | resize: '400x200#' }}" alt="{{ post.title | escape }}">
             {% endif %}
             <div class="caption">
               <h3>{{ post.title | escape }}</h3>
