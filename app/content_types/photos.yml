@@ -31,7 +31,7 @@ fields:
     label: Caption # Human readable name of the field
     type: string
     required: true
-    localized: false
+    localized: true
 
 - file: # The lowercase, underscored name of the field
     label: File # Human readable name of the field

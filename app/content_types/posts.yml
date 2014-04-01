@@ -31,7 +31,7 @@ fields:
     label: Title # Human readable name of the field
     type: string
     required: true
-    localized: false
+    localized: true
 
 - posted_at: # The lowercase, underscored name of the field
     label: Posted at # Human readable name of the field
@@ -50,7 +50,7 @@ fields:
     type: text
     required: false
     hint: A short lead-in to the post displayed when listing posts
-    localized: false
+    localized: true
     text_formatting: html # html (uses rich text editor) or text (uses plain text editor)
 
 - featured_image: # The lowercase, underscored name of the field
@@ -65,7 +65,7 @@ fields:
     type: text
     required: false
     hint: The full post text
-    localized: false
+    localized: true
     text_formatting: html # html (uses rich text editor) or text (uses plain text editor)
 
 - photos: # Name of the field
