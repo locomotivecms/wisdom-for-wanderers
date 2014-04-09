@@ -8,7 +8,7 @@ listed: true
 published: true
 
 # position among sibling pages
-position: 2
+position: 1
 
 # content type that this page is templatizing
 # content_type: "<slug of one of the content types>"
@@ -17,11 +17,10 @@ position: 2
 #   'some_block/some_slug': "<text>"
 #   'some_block/some_slug': "<relative path to the file under the public/samples folder>"
 ---
-
 {% extends parent %}
 
-{% block main %}
-  
+{% block 'main' %}
+
   <div class="img-box">
     <a href="{{ 'gyeongbokgung-full.jpg' | theme_image_url | resize: '800x' }}">
       <img src="{{ 'gyeongbokgung-full.jpg' | theme_image_url | resize: '400x'  }}" alt="Gyeongbokgung" />
@@ -30,9 +29,9 @@ position: 2
   </div>
 
   <p>
-    Thanks for visiting Wisdom for Wanders!
-    This blog aims to introduce readers to cool things to see, eat, and do all over the world. And along the way, I'll share some handy travel tips that can make wandering the globe easier and more fun than ever.
-    The blog tends to focus on sights and places a little off the tourist trail, so unadventurous beware.
+    Thanks for visiting Wisdom for Wanderers!
+    This blog aims to introduce readers to cool things to see, eat, and do all over the world.
+    And along the way, I'll share some handy travel tips that can make wandering the globe easier and more fun than ever. The blog tends to focus on sights and places a little off the tourist trail, so unadventurous beware.
   </p>
 
   <p>
