@@ -13,12 +13,11 @@ position: 1
 # content type that this page is templatizing
 # content_type: "<slug of one of the content types>"
 ---
-
 {% extends parent %}
 
-{% block main %}
+{% block 'main' %}
   
-  {% block featured_photo %}
+  {% block 'featured_photo' %}
     {% capture caption %}
       {% editable_text "caption", format: "raw", rows: 3, hint: "Text displayed below the photo and in the ALT attribute." %}
         Gyeongbokgung, Seoul
@@ -35,14 +34,13 @@ position: 1
 
   {% editable_text "about_body", rows: 20 %}
     <p>
-      Thanks for visiting Wisdom for Wanders!
-      This blog aims to introduce readers to cool things to see, eat, and do all over the world. And along the way, I'll share some handy travel tips that can make wandering the globe easier and more fun than ever.
-      The blog tends to focus on sights and places a little off the tourist trail, so unadventurous beware.
+      Thanks for visiting Wisdom for Wanderers!
+      This blog aims to introduce readers to cool things to see, eat, and do all over the world.
+      And along the way, I'll share some handy travel tips that can make wandering the globe easier and more fun than ever. The blog tends to focus on sights and places a little off the tourist trail, so unadventurous beware.
     </p>
     <p>
       I hope you enjoy the site and bon voyage!
     </p>
   {% endeditable_text %}
-
 
 {% endblock %}

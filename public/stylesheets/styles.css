@@ -21,17 +21,17 @@ div.img-box p {
 /* if they click on a boxed image, enlarge it */
 #lightbox {
   position: fixed;
-  top:0px; left:0px;
-  width:100%; height:100%;
-  padding-bottom:50px;
-  text-align:center;
+  top: 0px; left: 0px;
+  width: 100%; height: 100%;
+  padding-bottom: 50px;
+  text-align: center;
   background-color: #fff;
-  z-index:1000;
+  z-index: 1000;
 }
 
 #lightbox img {
   max-width: 100%;
-  max-height:100%;
+  max-height: 100%;
 }
 
 #lightbox p {
@@ -41,8 +41,8 @@ div.img-box p {
 
 /* phones */
 @media (max-width: 767px) {
-  body.about .img-box {
-    width:300px;
+  body.page-about .img-box {
+    width: 300px;
     margin: 0px auto 10px auto;
   }
 
@@ -51,8 +51,8 @@ div.img-box p {
 
 /* tablets and up */
 @media (min-width: 768px) {
-  body.about .img-box {
-    width:400px;
+  body.page-about .img-box {
+    width: 400px;
     margin-left: 20px;
     float: right;
   }
