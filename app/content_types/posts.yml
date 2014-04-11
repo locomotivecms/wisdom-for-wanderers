@@ -11,10 +11,10 @@ description: Blog posts about travel
 label_field_name: title
 
 # Valid values: manually, created_at, updated_at, or the slug of any field
-order_by: manually
+order_by: posted_at
 
 # Valid values: asc (ascending) and desc (descending). Set to asc by default.
-# order_direction: asc 
+order_direction: desc 
 
 # Specify a field slug to group entries by that field in the back-office.
 # group_by: <your field>

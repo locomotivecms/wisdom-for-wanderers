@@ -7,7 +7,7 @@ function equalizeHeights(items) {
 }
 
 function formatPostListings() {
-  var posts = $('body.posts div.posts div.thumbnail');
+  var posts = $('body.page-posts div.posts div.thumbnail');
   posts.each(function(){ $(this).css('min-height',"0px"); });
   if( $(window).width() >= 992 ) {
     for(var i = 0; i < posts.length; i+=3) { equalizeHeights( posts.slice(i, i+3) ); }

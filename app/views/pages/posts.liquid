@@ -6,7 +6,7 @@ position: 1
 ---
 {% extends parent %}
 
-{% block main %}
+{% block 'main' %}
   <div class="row posts">
     {% for post in contents.posts %}
       <div class="post-listing col-sm-6 col-md-4">
@@ -26,8 +26,7 @@ position: 1
         </div>
       </div>
       {% cycle  '', '<div class="clearfix visible-sm">&nbsp;</div>' %}
-      {% cycle '', '', '<div class="clearfix hidden-sm hidden-xs">&nbsp;</div>' %}
+      {% cycle '', '', '<div class="clearfix hidden-sm hidden-xs">&nbsp;</div>'  %}
     {% endfor %}
   </div>
 {% endblock %}
-
