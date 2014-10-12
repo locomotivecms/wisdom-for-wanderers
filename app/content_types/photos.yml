@@ -1,47 +1,47 @@
-# Human readable name of this type
+# Public name of this content type
 name: Photos
 
-# Lowercase, underscored handle used to access this type
+# TODO: explain
 slug: photos
 
 # Explanatory text displayed in the back-office
-description: Photos relating to blog posts
+description: Photos displayed at the bottom of posts.
 
-# Slug of field used to identify entries by default, such as the title
+# Default field (e.g title)
 label_field_name: caption
 
-# Valid values: manually, created_at, updated_at, or the slug of any field
-order_by: manually
+# Order of entries
+order_by: manually # default: manually, also available: created_at or any field slug
 
 # Order direction
 # order_direction: asc # default: asc, also available: desc
 
-# Specify a field slug to group entries by that field in the back-office.
+# Display entries grouped by <field> in the backoffice
 # group_by: <your field>
 
 # Activate public 'create' API (e.g for a contact form)
 # public_submission_enabled: false
 
-# Array of emails to be notified of new entries made with the public API
-# public_submission_accounts: ['john@example.com']
+# Emails to be notified on new entries using the public API
+# public_submission_accounts: ['john@acme.net']
 
 # Describe each field. The name shoud always be an underscored string
-fields: 
-- caption: # The lowercase, underscored name of the field
-    label: Caption # Human readable name of the field
-    type: string
-    required: true
-    localized: false
+fields:
+    - caption: # The lowercase, underscored name of the field
+        label: Caption # Human readable name of the field
+        type: string
+        required: true
+        localized: false
 
-- file: # The lowercase, underscored name of the field
-    label: File # Human readable name of the field
-    type: file
-    required: true
-    localized: false
+    - file: # The lowercase, underscored name of the field
+        label: File # Human readable name of the field
+        type: file
+        required: true
+        localized: false
 
-- post: # Name of the field
-    label: Post # Human readable name of the field
-    type: belongs_to
-    required: true
-    localized: false
-    class_name: posts
+    - post: # Name of the field
+        label: Post # Human readable name of the field
+        type: belongs_to
+        required: true
+        localized: false
+        class_name: posts

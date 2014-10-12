@@ -6,7 +6,7 @@ position: 1
 ---
 {% extends parent %}
 
-{% block main %}
+{% block 'main' %}
   <div class="row posts">
     {% paginate contents.posts by 12 %}
       {% for post in paginate.collection %}
@@ -27,10 +27,9 @@ position: 1
           </div>
         </div>
         {% cycle  '', '<div class="clearfix visible-sm">&nbsp;</div>' %}
-        {% cycle '', '', '<div class="clearfix hidden-sm hidden-xs">&nbsp;</div>' %}
+        {% cycle '', '', '<div class="clearfix hidden-sm hidden-xs">&nbsp;</div>'  %}
       {% endfor %}
-      {% include 'pagination', paginate %}
+      {% include 'pagination' with paginate %}
     {% endpaginate %}
   </div>
 {% endblock %}
-
