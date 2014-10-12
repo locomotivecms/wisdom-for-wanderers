@@ -12,7 +12,7 @@ content_type: posts
   <h3 class="posted-at">
     Posted at {{ post.posted_at | localized_date: '%-I:%M %p' }} on {{ post.posted_at | localized_date: '%B, %-d %Y' }}
   </h3>
-  
+
   {% if post.tags %}
     <p class="tags">
       <i class="glyphicon glyphicon-tags"></i>

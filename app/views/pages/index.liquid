@@ -1,31 +1,40 @@
 ---
-slug: index
 title: Home
 published: true
 ---
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
     <meta charset="utf-8">
-    <title>
-      {{ page.title | escape }} - {{ site.name | escape}}
-      | {% if page.seo_title %}{{ page.seo_title | escape}}{% else %}{{ site.seo_title | escape}}{% endif %}
-    </title>
-    <meta name="description" content="{% if page.meta_description %}{{ page.meta_description }}{% else %}{{ site.meta_description }}{% endif %}">
-    <meta name="keywords" content="{{ site.meta_keywords }} {{ page.meta_keywords }}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    {{ 'bootstrap.css' | stylesheet_tag }}
+    <meta name="keywords" content="{{ site.meta_keywords | escape }} {{ page.meta_keywords | escape }}">
+    {% if page.meta_description %}
+      <meta name="description" content="{{ page.meta_description | escape }}">
+    {% else %}
+      <meta name="description" content="{{ site.meta_description | escape }}">
+    {% endif %}
+
+    <title>
+      {{ page.title | escape }} - {{ site.name | escape }} |
+      {% if page.seo_title %}
+        {{ page.seo_title | escape }}
+      {% else %}
+        {{ site.seo_title | escape }}
+      {% endif %}
+    </title>
+
+    {{ 'bootstrap.min.css' | stylesheet_tag }}
     {{ 'fonts.css' | stylesheet_tag }}
     {{ 'styles.css' | stylesheet_tag }}
     <!--[if lt IE 9]>
-      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body class="{{ page.slug }}">       
+  <body class="page-{{ page.slug }}">
     <div class="container">
-
       <!-- Site Title -->
       <div class="row">
         <div class="col-md-10 col-md-offset-1 col-sm-12">
@@ -39,7 +48,7 @@ published: true
           <nav class="navbar navbar-default" role="navigation">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -47,7 +56,7 @@ published: true
               </button>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="collapse navbar-collapse" id="main-nav">
               <ul class="nav navbar-nav">
                 <li {% if page.slug == "index" %}class="active"{% endif %}>
                   <a href="/">Home</a>
@@ -59,12 +68,11 @@ published: true
         </div>
       </div>
 
-
       <!-- Page Content -->
       <div class="row">
         <div class="col-md-10 col-md-offset-1 col-sm-12">
-          {% unless page.slug == 'index' %}<h2>{{ page.title | escape }}</h2>{% endunless %}
-          {% block main %}
+          <h2>{{ page.title | escape }}</h2>
+          {% block 'main' %}
             {% capture jumbotron_title %}
               {% editable_text "jumbotron_title", format: "raw", rows: 1 %}
               Life's to short not to get away for awhile!
@@ -89,6 +97,7 @@ published: true
                 </a>
               </p>
             </div>
+
           {% endblock %}
           {% include 'footer' %}
         </div>
@@ -96,7 +105,7 @@ published: true
     </div>
 
     <!-- Javascripts -->
-    <script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type='text/javascript' src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     {{ 'bootstrap.min.js' | javascript_tag }}
     {{ 'main.js' | javascript_tag }}
   </body>
