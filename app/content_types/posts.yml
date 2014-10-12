@@ -14,7 +14,7 @@ label_field_name: title
 order_by: posted_at
 
 # Valid values: asc (ascending) and desc (descending). Set to asc by default.
-order_direction: desc 
+order_direction: desc
 
 # Specify a field slug to group entries by that field in the back-office.
 # group_by: <your field>
