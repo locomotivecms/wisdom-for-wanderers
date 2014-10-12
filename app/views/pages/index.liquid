@@ -71,11 +71,13 @@ published: true
       <!-- Page Content -->
       <div class="row">
         <div class="col-md-10 col-md-offset-1 col-sm-12">
-          <h2>{{ page.title | escape }}</h2>
+          {% if page.slug != "index" %}
+            <h2>{{ page.title | escape }}</h2>
+          {% endif %}
           {% block 'main' %}
             {% capture jumbotron_title %}
               {% editable_text "jumbotron_title", format: "raw", rows: 1 %}
-              Life's to short not to get away for awhile!
+                Life's to short not to get away for awhile!
               {% endeditable_text %}
             {% endcapture %}
             {% capture jumbotron_message %}
