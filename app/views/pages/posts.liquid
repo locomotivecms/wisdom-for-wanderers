@@ -19,7 +19,7 @@ position: 1
               <h3>{{ post.title | escape }}</h3>
               <div class="teaser">{{ post.teaser }}</div>
               <p>
-                <a href="/posts/{{ post._slug }}" class="btn btn-primary">
+                <a href="/{{ locale }}/posts/{{ post._slug }}" class="btn btn-primary">
                   {{ 'read_more' | translate }}
                 </a>
               </p>
