@@ -1,7 +1,7 @@
 # The name of this site
 # This text displays in the back-office and
 # can be used in templates through the site.name global variable
-name: Wisdom for Wanderers
+name: "Wisdom for Wanderers"
 
 # The site's subdomain
 # This option is for sites on multi-site engines
@@ -31,7 +31,7 @@ timezone: "Central Time (US & Canada)"
 seo_title:
   en: "Travel Tips for the Adventurous!"
   ja: "冒険の一歩を踏み出しましょう"
-meta_keywords: 
+meta_keywords:
   en: "travel backpacking budget adventure"
   ja: "旅行 バックパッキング 安い旅行 冒険"
 meta_description:

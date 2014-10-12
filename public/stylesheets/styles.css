@@ -4,19 +4,19 @@ body * {
 }
 
 /* home page */
-body.index .jumbotron {
+body.page-index .jumbotron {
   color: #fff;
   text-align: justify;
   background-image: url('../images/new_york_at_night.jpg');
   background-position: center top;
 }
-body.index .jumbotron {
+body.page-index .jumbotron {
   padding-top: 10px;
   padding-bottom: 25%;
 }
 
 /* posts.liquid */
-body.posts div.post-listing {
+body.page-posts div.post-listing {
   margin-bottom: 20px;
 }
 
@@ -26,9 +26,9 @@ article.post p.tags span {
 }
 
 article.post h3.posted-at {
-  font-size:20px;
-  margin-top:0px;
-  color:#999;
+  font-size: 20px;
+  margin-top: 0px;
+  color: #999;
 }
 
 div.photos div.img-box {
@@ -46,7 +46,6 @@ footer p {
   padding: 10px;
   text-align: center;
 }
-
 
 /* a nice frame for images */
 div.img-box {
@@ -66,17 +65,17 @@ div.img-box p {
 /* if they click on a boxed image, enlarge it */
 #lightbox {
   position: fixed;
-  top:0px; left:0px;
-  width:100%; height:100%;
-  padding-bottom:50px;
-  text-align:center;
+  top: 0px; left: 0px;
+  width: 100%; height: 100%;
+  padding-bottom: 50px;
+  text-align: center;
   background-color: #fff;
-  z-index:1000;
+  z-index: 1000;
 }
 
 #lightbox img {
   max-width: 100%;
-  max-height:100%;
+  max-height: 100%;
 }
 
 #lightbox p {
@@ -84,23 +83,20 @@ div.img-box p {
   color: #fff;
 }
 
-
-
 /* phones */
 @media (max-width: 767px) {
-  body.about .img-box {
-    width:300px;
+  body.page-about .img-box {
+    width: 300px;
     margin: 0px auto 10px auto;
   }
 
   h1, h2 { text-align:center; }
 }
 
-
 /* tablets and up */
 @media (min-width: 768px) {
-  body.about .img-box {
-    width:400px;
+  body.page-about .img-box {
+    width: 400px;
     margin-left: 20px;
     float: right;
   }

@@ -1,3 +1,8 @@
+# Your translations go here. To be used with the 'translate' liquid filter
+# Example:
+#   {{ 'hello_world' | translate }}
+#
+
 home_page:
   en: Home
   ja: ホーム
