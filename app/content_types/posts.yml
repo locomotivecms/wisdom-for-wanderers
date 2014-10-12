@@ -11,10 +11,10 @@ description: Blog posts about travel
 label_field_name: title
 
 # Valid values: manually, created_at, updated_at, or the slug of any field
-order_by: manually
+order_by: posted_at
 
 # Valid values: asc (ascending) and desc (descending). Set to asc by default.
-# order_direction: asc 
+order_direction: desc 
 
 # Specify a field slug to group entries by that field in the back-office.
 # group_by: <your field>
@@ -26,7 +26,7 @@ order_by: manually
 # public_submission_accounts: ['john@example.com']
 
 # A list describing each field
-fields: 
+fields:
 - title: # The lowercase, underscored name of the field
     label: Title # Human readable name of the field
     type: string
@@ -68,11 +68,12 @@ fields:
     localized: false
     text_formatting: html # html (uses rich text editor) or text (uses plain text editor)
 
-- photos: # Name of the field
+- photos:
     label: Photos
     type: has_many
     required: false
     localized: false
     class_name: photos # Define the slug of the target content type (eg. comments)
-    inverse_of: post  # Define the name of the field referring to Tests in the target content type (eg. post)
+    inverse_of: post  # Define the name of the field referring to Tests in the target content type
     ui_enabled: true # If you want to manage the entries of the relationship directly from the source entry
+
